@@ -8,7 +8,14 @@
     <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageIcon>packageIcon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
   <ItemGroup>
+    <None Include="../../packageIcon.png" Pack="true" PackagePath=""/>
+
     <Content Include="_._" PackagePath="lib\net45\" />
     <Content Include="_._" PackagePath="lib\netstandard1.0\" />
 
@@ -19,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- https://natemcmaster.com/blog/2017/07/05/msbuild-task-in-nuget/ -->
     <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.10.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Build.Framework" Version="16.10.0" PrivateAssets="All" />
   </ItemGroup>

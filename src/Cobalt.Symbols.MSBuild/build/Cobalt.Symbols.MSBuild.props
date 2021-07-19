@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_CobaltDownloaderPath Condition="'$(MSBuildRuntimeType)' != 'Core'">$(MSBuildThisFileDirectory)..\tools\net472\NuGet.Symbols.Downloader.exe</_CobaltDownloaderPath>
-    <_CobaltDownloaderPath Condition="'$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory)..\tools\net5.0\NuGet.Symbols.Downloader.exe</_CobaltDownloaderPath>
+    <_CobaltDownloaderPath Condition="'$(MSBuildRuntimeType)' != 'Core'">$(MSBuildThisFileDirectory)..\tools\net472\Cobalt.Symbols.Downloader.exe</_CobaltDownloaderPath>
+    <_CobaltDownloaderPath Condition="'$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory)..\tools\net5.0\Cobalt.Symbols.Downloader.exe</_CobaltDownloaderPath>
 
     <_CobaltSymbolsTaskAssembly Condition="'$(MSBuildRuntimeType)' != 'Core'">..\tasks\net472\Cobalt.Symbols.MSBuild.dll</_CobaltSymbolsTaskAssembly>
     <_CobaltSymbolsTaskAssembly Condition="'$(MSBuildRuntimeType)' == 'Core'">..\tasks\net5.0\Cobalt.Symbols.MSBuild.dll</_CobaltSymbolsTaskAssembly>

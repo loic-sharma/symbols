@@ -14,9 +14,8 @@
       Assemblies="@(_AssembliesMissingSymbols)" />
 
     <!-- TODO: -->
-    <!-- Currently this breaks the clean task. -->
-    <!-- The download symbols task should output the items that were written -->
-    <!-- The FileWritesShareable variable should be updated to include these new items -->
+    <!-- The clean task does not remove downloaded symbols. -->
+    <!-- The FileWritesShareable variable should be updated to include downloaded symbols. -->
     <!-- See: https://github.com/dotnet/msbuild/issues/2408#issuecomment-321082997 -->
 
    </Target>
