@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net472</TargetFrameworks>
+
+    <!-- Change the default location where NuGet will put the build output -->
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="_._" PackagePath="lib\net45\" />
+    <Content Include="_._" PackagePath="lib\netstandard1.0\" />
+
+    <Content Include="build\Cobalt.Symbols.MSBuild.props" PackagePath="build\" />
+    <Content Include="build\Cobalt.Symbols.MSBuild.targets" PackagePath="build\" />
+    <Content Include="buildMultiTargeting\Cobalt.Symbols.MSBuild.props" PackagePath="buildMultiTargeting\" />
+    <Content Include="buildMultiTargeting\Cobalt.Symbols.MSBuild.targets" PackagePath="buildMultiTargeting\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- https://natemcmaster.com/blog/2017/07/05/msbuild-task-in-nuget/ -->
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.10.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="16.10.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
